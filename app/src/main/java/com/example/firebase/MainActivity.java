@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.AdapterView;
@@ -127,12 +128,13 @@ public class MainActivity extends AppCompatActivity {
         final EditText editText = dialogView.findViewById(R.id.editTextName);
         final Button buttonUpdate = dialogView.findViewById(R.id.buttonUpdate);
         final Spinner spinner = findViewById(R.id.spinnerGenres);
-        final Button buttonDelete = findViewById(R.id.buttonDelete);
+        final Button buttonDelete = dialogView.findViewById(R.id.buttonDelete);
 
         dialogBuilder.setTitle("Updating Artist" + artistName);
 
         final AlertDialog alertDialog = dialogBuilder.create();
         alertDialog.show();
+
 
         buttonUpdate.setOnClickListener(new View.OnClickListener() {
             @Override
